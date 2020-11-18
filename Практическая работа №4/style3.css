@@ -1,0 +1,39 @@
+table.table1 {
+	border: solid;
+	border-color: #98c7e3;
+	border-collapse: collapse;
+}
+.table1 td, table1 th {
+	border-bottom: dashed;
+	border-color: #d2e5fe;
+	border-width: 0.2mm;
+	padding: 15px;
+	color: #5a60a3;
+	background-color: #b4dffe;
+}
+.table1 tr:hover td{
+	background-color: #8bbefd;
+}
+.table1 th {
+	background-color: white;
+	color: #4763a7;
+}
+table.table2 {
+	text-align: center;
+	font-size: 20px;
+	border: solid 1px;
+	border-top: solid 5px;
+	border-bottom: solid 5px;
+	border-color: #9cb0ef;
+	background-color: #e8edfe;
+	border-collapse: collapse;
+	color: #7b779d;
+}
+.table2 th, .table2 td {
+	border-left: solid 1px;
+	border-color: #9cb0ef;
+	padding: 8px 16px;
+}
+.table2 th {
+	color: #4763a7;
+}
