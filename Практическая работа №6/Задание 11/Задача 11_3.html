@@ -3,10 +3,11 @@
 <title>Практическая работа №6</title>
 <meta name="Practice">
 <script>
-	var arr = [12, 15, 20, 25, 59, 79];
-	var sum = 0;
-	for (var i = 0; i < arr.length; i++) sum += arr[i];
-	alert(sum / arr.length);
+	var date = '2020-11-18';
+	var arr = date.split('-');
+	var arr = arr.reverse();
+	var result = arr.join('.');
+	alert(result);
 </script>
 </head>
 <body>
