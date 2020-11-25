@@ -1,0 +1,42 @@
+body {
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+ul.menu > li {
+    float: left;
+    position: relative;
+}
+ul.menu > li > a {
+    display: block;
+    padding: 10px;
+    color: #d6d6d6;
+    background-color: #333333;
+    text-decoration: none;
+}
+ul.menu > li > a:hover {
+    background-color: #464646;
+}
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: 120px;
+    top: 38px;
+    background-color: white;
+    border: 1px solid #d6d6d6;
+}
+ul.submenu > li > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: #aaaaaa;
+    text-decoration: none;
+}
+ul.submenu > li > a:hover {
+    text-decoration: underline;
+}
+ul.menu > li:hover > ul.submenu {
+    display: block;
+}

@@ -1,0 +1,36 @@
+input[type="checkbox"] + label {    /* 1 */
+	background-color: green;
+}
+input[type="checkbox"]:not(:checked) + label{    /* 2 */
+	background-color: red;
+}
+[id^="message-"], [id^="message"] {    /* 3 */
+	background-color: antiquewhite;
+}
+[id^="message-"] {    /* 4 */
+	text-decoration: underline;
+	color: green;
+}
+a[href$=".zip"] {    /* 5 */
+	color: goldenrod;
+}
+[data-action~="delete"] {    /* 6 */
+	color: orange;
+}
+[data-action]:not([data-action~="delete"]) {    /* 7 */
+	text-decoration: line-through;
+	text-decoration-color: maroon;
+}
+#messages li:nth-child(2n) {    /* 8 */
+	font-family: Arial Black;
+}
+h3#widget-title + * {    /* 9 */
+	margin-left: 20px;
+}
+h3#widget-title ~ a {    /* 10 */
+	background-color: gold;
+}
+#messages li:last-child a {    /* 11 */
+	background-color: skyblue;
+	font-size: 25px;
+}
