@@ -3,8 +3,9 @@
 <title>Практическая работа №6</title>
 <meta name="Practice">
 <script>
-	var str = 'я учу javascript!';
-	alert(str.indexOf('учу'));
+	var obj = {js: 'test', jq: 'hello', css: 'world'};
+	var arr = Object.keys(obj);
+	for (var i = 0; i < arr.length; i++) document.write(arr[i] + ' ');
 </script>
 </head>
 <body>
