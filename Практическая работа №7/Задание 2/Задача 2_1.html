@@ -1,0 +1,22 @@
+﻿<html>
+<head>
+<title>Практическая работа №7</title>
+<meta name="Practice">
+<script>
+	var x=1;
+	function season() {
+		if (x==1) { 
+			document.getElementById('text').innerText="Winter";
+			x = 0;
+		} else {
+			document.getElementById('text').innerText="Summer";
+			x = 1;
+		}
+	}
+</script>
+</head>
+<body>
+	<h1 id="text">Summer</h1>
+	<button onclick="season()">Изменить время года</button>
+</body>
+</html>

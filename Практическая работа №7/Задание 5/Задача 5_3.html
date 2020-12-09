@@ -1,0 +1,15 @@
+﻿<html>
+<head>
+<title>Практическая работа №7</title>
+<meta name="Practice">
+<script>
+	function func(elem) {
+		document.getElementById('label').innerHTML = elem.value;
+	}
+</script>
+</head>
+<body>
+	<input onblur="func(this)" type="text" placeholder="Введи в меня текст!">
+	<label id="label"></label>
+</body>
+</html>
