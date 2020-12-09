@@ -1,0 +1,27 @@
+﻿<html>
+<head>
+<title>Практическая работа №7</title>
+<meta name="Practice">
+<script>
+	window.setInterval(slider, 2000);
+	
+	function slider() {
+		var img1 = document.getElementById('img1');
+		var img2 = document.getElementById('img2');
+		var img3 = document.getElementById('img3');
+		var img4 = document.getElementById('img4');
+		var imgX = img1.src;
+			img1.src = img2.src;
+			img2.src = img3.src;
+			img3.src = img4.src;
+			img4.src = imgX;
+	}
+</script>
+</head>
+<body>
+	<img id="img1" src="winter.jpg" height="800px">
+	<img id="img2" src="spring.jpg" height="800px" style="display: none;">
+	<img id="img3" src="summer.jpg" height="800px" style="display: none;">
+	<img id="img4" src="autumn.jpg" height="800px" style="display: none;">
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿<html>
+<head>
+<title>Практическая работа №7</title>
+<meta name="Practice">
+<script>
+	function func() {
+		window.setInterval(timer, 1000);
+	}
+	
+	function timer() {
+		var elem = document.getElementById('timer');
+		elem.innerHTML = parseInt(elem.innerHTML) + 1;
+	}
+</script>
+</head>
+<body>
+	<p id="timer" style="font-size: 40px;">0</p>
+	<input type="submit" value="Начать отсчет" onclick="func()">
+</body>
+</html>

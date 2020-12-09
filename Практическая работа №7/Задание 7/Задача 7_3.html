@@ -1,0 +1,23 @@
+﻿<html>
+<head>
+<title>Практическая работа №7</title>
+<meta name="Practice">
+<script>
+	window.setInterval(time_func, 1000);
+
+	function time_func() {
+		date = new Date();
+		h = date.getHours();
+		if (h < 10) h = '0' + h;
+		m = date.getMinutes();
+		if (m < 10) m = '0' + m;
+		s = date.getSeconds();
+		if (s < 10) s = '0' + s;
+		document.getElementById('time1').innerHTML = h + ":" + m + ":" + s;
+	}
+</script>
+</head>
+<body>
+	<p id="time1" style="text-align: center; font-size: 100px;">00:00:00</p>
+</body>
+</html>

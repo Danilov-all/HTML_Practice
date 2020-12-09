@@ -1,0 +1,25 @@
+﻿<html>
+<head>
+<title>Практическая работа №7</title>
+<meta name="Practice">
+<script>
+	window.setInterval(time1, 1000);
+	function time1() {
+		var now = new Date();
+		var midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1, 0, 0, 0);
+		var d = Math.floor((midnight - now)/1000);
+		var hR = Math.floor(d/(60*60));
+		var mR = Math.floor((d-hR*60*60)/60);
+		var sR = Math.floor(d%60);
+		if (hR < 10) hR = '0' + hR;
+		if (mR < 10) mR = '0' + mR;
+		if (sR < 10) sR = '0' + sR;
+		document.getElementById('time1').innerHTML = hR + ":" + mR + ":" + sR;
+	}
+</script>
+</head>
+<body>
+	<p style="text-align: center; font-size: 50px;">До полуночи осталось:</p>
+	<p id="time1" style="text-align: center; font-size: 100px;">00:00:00</p>
+</body>
+</html>

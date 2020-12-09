@@ -1,0 +1,25 @@
+﻿<html>
+<head>
+<title>Практическая работа №7</title>
+<meta name="Practice">
+<script>
+	function start_t() {
+		window.timerId = window.setInterval(timer, 1000);
+	}
+	
+	function stop_t() {
+		window.clearInterval(window.timerId);
+	}
+	
+	function timer() {
+		var elem = document.getElementById('timer');
+		elem.innerHTML = parseInt(elem.innerHTML) + 1;
+	}
+</script>
+</head>
+<body>
+	<p id="timer" style="font-size: 40px;">0</p>
+	<input type="submit" value="Начать отсчет" onclick="start_t()">
+	<input type="submit" value="Остановить отсчет" onclick="stop_t()">
+</body>
+</html>
