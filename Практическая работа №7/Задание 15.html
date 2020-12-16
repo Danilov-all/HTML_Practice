@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+<title>Практическая работа №7</title>
+<meta name="Practice">
+<style>
+#largeImg {
+  border: solid 1px #ccc;
+  width: 800px;
+  height: 600px;
+}
+#thumbs {
+  margin: 0;
+  padding: 0;
+}
+#thumbs a {
+  margin: 2px;
+  float: left;
+}
+
+#thumbs a:hover {
+  border: 1px solid red;
+}
+
+#thumbs li {
+  list-style: none;
+}
+
+img{
+	width: 155px;
+	height: 155px;
+}
+</style>
+</head>
+<body>
+
+<p><img id="largeImg" src="nature1.jpg"></p>
+
+<ul id="thumbs">
+	<li>
+      <a href="nature1.jpg"><img src="nature1.jpg"></a>
+    </li>
+    <li>
+      <a href="nature2.jpg"><img src="nature2.jpg"></a>
+    </li>
+    <li>
+      <a href="nature3.jpg"><img src="nature3.jpg"></a>
+    </li>
+    <li>
+      <a href="nature4.jpg"><img src="nature4.jpg"></a>
+    </li>
+    <li>
+      <a href="nature5.jpg"><img src="nature5.jpg"></a>
+    </li>
+</ul>
+
+<script>
+	thumbs.onclick = function(event) {
+		let thumbnail = event.target.closest('a');
+		if (!thumbnail) return;
+		showThumbnail(thumbnail.href);
+		event.preventDefault();
+	}
+
+    function showThumbnail(href) { largeImg.src = href; }
+</script>
+
+</body>
+</html>

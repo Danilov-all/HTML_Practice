@@ -1,0 +1,20 @@
+﻿<html>
+<head>
+<title>Практическая работа №7</title>
+<meta name="Practice">
+<script>
+	function func() {
+		var text = document.getElementById('text');
+		text.value = "Зеленый";
+		text.style.color = "green";
+		text.style.width = "140px";
+		text.style.borderRadius = "10px";
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="text" style="color: red; width: 70px; height:20px;" value="Красный">
+	<br>
+	<button onclick="func()" style="position: absolute; margin-top: 30px;">Изменить</button>
+</body>
+</html>

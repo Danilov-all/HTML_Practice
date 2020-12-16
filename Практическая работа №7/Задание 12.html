@@ -1,0 +1,93 @@
+﻿<html>
+<head>
+<title>Практическая работа №7</title>
+<meta name="Practice">
+</head>
+<body>
+	<h1 style="text-align: center;">Виды операционных систем</h1>
+	<ul class="tree" id="tree">
+    <li>Настольные ОС
+      <ul>
+        <li>Microsoft Windows
+          <ul>
+			<li>Windows XP</li>
+            <li>Windows Vista</li>
+            <li>Windows 7</li>
+			<li>Windows 8</li>
+			<li>Windows 8.1</li>
+			<li>Windows 10</li>
+          </ul>
+        </li>
+        <li>Apple macOS
+          <ul>
+			<li>macOS Sierra</li>
+			<li>macOS High Sierra</li>
+			<li>macOS Mojave</li>
+			<li>macOS Catalina</li>
+            <li>macOS Big Sur</li>
+          </ul>
+        </li>
+		<li>Linux
+			<ul>
+				<li>Ubuntu</li>
+				<li>Parsix</li>
+				<li>Kubuntu</li>
+				<li>Lubuntu</li>
+				<li>Xubuntu</li>
+			</ul>
+		</li>
+      </ul>
+    </li>
+    <li>Мобильные ОС
+      <ul>
+        <li>iOS
+          <ul>
+			<li>iOS 9</li>
+            <li>iOS 10</li>
+			<li>iOS 11</li>
+			<li>iOS 12</li>
+			<li>iOS 13</li>
+			<li>iOS 14</li>
+          </ul>
+        </li>
+        <li>Android
+          <ul>
+			<li>Android 6 Marshmallow</li>
+            <li>Android 7 Nougat</li>
+			<li>Android 8 Oreo</li>
+			<li>Android 9 Pie</li>
+			<li>Android 10</li>
+			<li>Android 11</li>
+          </ul>
+        </li>
+		<li>Windows Mobile
+		  <ul>
+			<li>Windows Mobile 6.0</li>
+            <li>Windows Mobile 6.1</li>
+			<li>Windows Mobile 6.1.4</li>
+			<li>Windows Mobile 6.5</li>
+			<li>Windows Mobile 6.5.1</li>
+			<li>Windows Mobile 6.5.3</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  
+<script>
+	for (let li of tree.querySelectorAll('li')) {
+		var span = document.createElement('span');
+		li.prepend(span);
+		span.append(span.nextSibling); 
+	}
+
+	tree.onclick = function(event) {
+		if (event.target.tagName != 'SPAN') return;
+		var childrenContainer = event.target.parentNode.querySelector('ul');
+		if (!childrenContainer) return; 
+		childrenContainer.hidden = !childrenContainer.hidden;
+    }
+</script>
+  
+</body>
+</html>

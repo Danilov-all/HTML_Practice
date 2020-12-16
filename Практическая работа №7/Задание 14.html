@@ -1,0 +1,32 @@
+﻿<html>
+<head>
+<title>Практическая работа №7</title>
+<meta name="Practice">
+</head>
+<body>
+	
+<div id="contents">
+	<p>
+	Переход на <a href="https://yandex.ru/">Яндекс</a> <br>
+	Переход на <a href="https://google.com/">Google</a> <br>
+	Переход на <a href="https://rambler.ru/">Рамблер</a>
+	</p>
+<div>
+	
+<script>
+	contents.onclick = function(event) {
+		function handleLink(href) {
+			let isLeaving = confirm('Вы действительно хотите перейти по ссылке?');
+			if (!isLeaving) return false;
+		}
+
+		var target = event.target.closest('a');
+
+		if (target && contents.contains(target)) {
+			return handleLink(target.getAttribute('href'));
+		}
+    };
+</script>
+
+</body>
+</html>

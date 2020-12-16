@@ -1,0 +1,22 @@
+﻿<html>
+<head>
+<title>Практическая работа №8</title>
+<meta name="Practice">
+</head>
+<body>
+
+<img id="ship" style="position: relative; width: 200px; height: 126px;"src="ship.png">
+
+<script>
+	ship.onclick = function() {
+		let start = Date.now();
+		let timer = setInterval(function() {
+			let timePassed = Date.now() - start;
+			ship.style.left = timePassed / 10 + 'px';
+			if (timePassed > 2000) clearInterval(timer);
+		}, 20);
+    }
+</script>
+
+</body>
+</html>

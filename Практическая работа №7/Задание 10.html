@@ -1,0 +1,54 @@
+﻿<html>
+<head>
+<title>Практическая работа №7</title>
+<meta name="Practice">
+<style>
+	.pane {
+		padding: 10px 20px 10px;
+		border: solid 1px black;
+		position: relative;
+		margin: 20px;
+	}
+
+	.remove-button {
+		position: absolute;
+		font-size: 20px;
+		right: 10px;
+		display: block;
+		width: 24px;
+		height: 24px;
+		border: none;
+		background: transparent;
+		cursor: pointer;
+	}
+</style>
+</head>
+<body>
+	
+	<h1 style="text-align: center;">Виды операционных систем</h1>
+	
+	<div class="pane">
+		<h3>Microsoft Windows</h3>
+		<p>Компания Microsoft создала операционную систему Windows в середине 1980-х годов. За последующие годы были выпущены много версий Windows, но наиболее популярными из них являются Windows 10 (выпущен в 2015 году), Windows 8 (2012), Windows 7 (2009), Windows Vista (2007), и Windows XP (2001). Windows поставляется предустановленной на большинстве новых компьютерах, и является самой популярной операционной системой в мире.</p>
+	</div>
+	
+	<div class="pane">
+		<h3>Apple Mac OS X</h3>
+		<p>Mac OS представляет собой линейку операционных систем, созданных компанией Apple. Она поставляется предустановленной на всех новых компьютерах Mac. Последние версии этой операционной системы известны как macOS. А именно Big Sur (выпущенный в 2020 году), Catalina (2019), Mojave (2018), High Sierra (2017), и Sierra (2016). Также есть Mac OS X Server, который предназначен для работы на серверах.</p>
+	</div>
+	
+	<div class="pane">
+		<h3>Linux</h3>
+		<p>Linux — семейка операционных систем с открытым исходным кодом. Это значит, они могут модифицироваться (изменяться) и распространятся любым человеком по всему миру. Это очень отличает эту ОС от других, таких как Windows, которая может изменяться и распространяться только самим владельцем (Microsoft). Преимущества Линукса в том, что он бесплатный, и есть много различных версий на выбор. Каждая версия имеет свой внешний вид, и самые популярные из них это Ubuntu, Mint и Fedora.</p>
+	</div>
+	
+	<script>
+	let panes = document.querySelectorAll('.pane');
+	for(let pane of panes) {
+		pane.insertAdjacentHTML("afterbegin", '<button class="remove-button">x</button>');
+		pane.firstChild.onclick = () => pane.remove();
+	}
+	</script>
+	
+</body>
+</html>
